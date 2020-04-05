@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 
 import requests
-import json
 import urllib3
 import sys
 import base64
@@ -53,7 +52,7 @@ cert_post_body["file_content"]=cert_fullchain
 cert_post_body["key_file_content"]=cert_privkey
 
 writelog(" ")
-writelog(json.dumps(cert_post_body))
+writelog(cert_post_body)
 
 # Now we get down to business - for each gate in the config file do the following
 for gate in my_gates:
